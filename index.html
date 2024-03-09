@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header-section">
+        <div class="container">
+            <img src="./img/logo.png" alt="">
+            <nav class="header_nav">
+                <span class="header_span">
+                    Інтерактив
+                </span>
+                <span class="header_span">
+                    Наша команда
+                </span>
+                <span class="header_span">
+                    Контакти
+                </span>
+            </nav>
+            <div class="header_info">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="header_login">
+                    Вітаємо, User!
+                </span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="plays-sction_title">
+                Популярні інетрактивні ігри
+            </h1>
+            <div class="border"></div>
+            <section class="year">
+                <h2 class="year_title">
+                    Перевір в який рік ти народився
+                </h2>
+                <div class="year_div">
+                    <input placeholder="Введіть рік народження" class="year_input" type="text">
+                    <button class="year_button">
+                        <img class="year_img" src="./img/Group 104.png" alt="">
+                    </button>
+                    <span class="year_span">
+                        Введіть рік
+                    </span>
+                </div>
+
+            </section>
+            <div class="border"></div>
+            <section class="find">
+                <h2 class="find_title">
+                    Вгадай число, яке загадав комп’ютер
+                </h2>
+                <div class="find_div">
+                    <input placeholder="Введіть число" type="text" class="find_input">
+                    <button type="button" class="find_button">
+                        <img src="./img/Group 104.png" alt="">
+                    </button>
+                    <span class="find_span">
+                        Введіть число
+                    </span>
+                </div>
+            </section>
+            <div class="border"></div>
+            <section class="games">
+                <h2 class="games_title">
+                    Камінь - ножиці - папір
+                </h2>
+                <ul class="games_list">
+                    <li class="games_item">
+                        <button type="button" id="rock"></button>
+                    </li>
+                    <li class="games_item">
+                        <button type="button" id="paper"></button>
+                    </li>
+                    <li class="games_item">
+                        <button type="button" id="legs"></button>
+                    </li>
+                </ul>
+                <span class="games_span">
+                    Ви виграли раунд!
+                </span>
+                <span class="games_you-score">
+
+                </span>
+                <span class="games_computer-score">
+
+                </span>
+                <button class="games_button">
+                    Варіант комп’ютера
+                </button>
+            </section>
+            <div class="border"></div>
+            <section class="canculator">
+                <h2 class="canculator_titel">
+                    Калькулятор
+                </h2>
+                <div class="canculator_div">
+                    <input placeholder="Введіть число" type="text" class="canculator_number-one">
+                    <ul class="canculator_list">
+                        <li class="canculator_item">
+                            <button type="button" class="canculator_button canculator_button-add">
+                                +
+                            </button>
+                        </li>
+                        <li class="canculator_item">
+                            <button type="button" class="canculator_button canculator_button-multiply">
+                                *
+                            </button>
+                        </li>
+                        <li class="canculator_item">
+                            <button type="button" class="canculator_button canculator_button-minus">
+                                -
+                            </button>
+                        </li>
+                        <li class="canculator_item">
+                            <button type="button" class="canculator_button canculator_button-division">
+                                /
+                            </button>
+                        </li>
+                    </ul>
+                    <input placeholder="Введіть число" type="text" class="canculator_number-tow">
+                    <button type="button" class="canculator_button-result">
+                        =
+                    </button>
+                    <span class="canculator_result">
+                        Результат
+                    </span>
+                </div>
+            </section>
+            <div class="border"></div>
+            <section class="time">
+                <h2 class="time_title">
+                    Калькулятор часу
+                </h2>
+                <div class="time_div">
+                    <input placeholder="Введіть число" type="text" class="time_input">
+                    <button type="button" class="time_button">
+                        <img src="./img/Group 104.png" alt="">
+                    </button>
+                    <span class="time_span">
+                        Введіть час
+                    </span>
+                </div>
+            </section>
+            <div class="border"></div>
+            <section class="dinosaur">
+                <h2 class="dinosaur_title">
+                    Google динозавр
+                </h2>
+                <div class="dinosaur_game">
+                    <img class="dinosaur_img" src="./img/dinosaur.png" alt="">
+                    <img class="dinosaur_cactus" src="./img/cactus.png" alt="">
+                    <div class="dinosaur_road"></div>
+                </div>
+            </section>
+            <div class="border"></div>
+            <section class="football">
+                <h2 class="football_title">
+                    Футбол
+                </h2>
+                <div class="football_filed">
+                    <img class="football_ball" src="./img/ball.png" alt="">
+                </div>
+
+            </section>
+            <div class="border"></div>
+            <section class="numbers">
+                <h2 class="numbers_title">
+                    Введіть 3 числа
+                </h2>
+                <ul class="numbers_list">
+                    <li class="numbers_item">
+                        <input placeholder="Введіть число" type="text" class="numbers_input1 numbers_input">
+                    </li>
+                    <li class="numbers_item">
+                        <input placeholder="Введіть число" type="text" class="numbers_input2 numbers_input">
+                    </li>
+                    <li class="numbers_item">
+                        <input placeholder="Введіть число" type="text" class="numbers_input3 numbers_input">
+                    </li>
+                </ul>
+                <h3 class="numbers_result">
+                    Найбільше число, яке ви ввели - (число)
+                </h3>
+            </section>
+            <div class="border"></div>
+            <section class="teams">
+                <h2 class="teams_title">
+                    Наша команда
+                </h2>
+                <button type="button" id="next"></button>
+                <div>
+                    <div id="slide"></div>
+                    <div id="slide"></div>
+                    <div id="slide"></div>
+                    <div id="slide"></div>
+                    <div id="slide"></div>
+                </div>
+                <button type="button" id="prev"></button>
+            </section>
+            <div class="border"></div>
+            <section class="scientist">
+                <h2 class="scientist_title">
+                    Обери вченого/их
+                </h2>
+                <ul class="scientist_list">
+
+                </ul>
+                <ul class="scientist_button-list">
+                    <li class="scientist_item">
+                        <button type="button" class="scientist_button">
+                            Які вчені народилися в 19 ст.
+                        </button>
+                    </li>
+                    <li class="scientist_item">
+                        <button type="button" class="scientist_button">
+                            Відсортувати вчених за алфавітом
+                        </button>
+                    </li>
+                    <li class="scientist_item">
+                        <button type="button" class="scientist_button">
+                            Відсортувати вчених за кількістю прожитих років
+                        </button>
+                    </li>
+                    <li class="scientist_item">
+                        <button type="button" class="scientist_button">
+                            Знайти вченого, який народився найпізніше
+                        </button>
+                    </li>
+                    <li class="scientist_item">
+                        <button type="button" class="scientist_button">
+                            1. Знайти вчених, в яких співпадають перші літери імені і прізвища
+                        </button>
+                    </li>
+                    <li class="scientist_item">
+                        <button type="button" class="scientist_button">
+                            Знайти вченого, який прожив найдовше і вченого,
+                            який прожив найменше
+                        </button>
+                    </li>
+                    <li class="scientist_item">
+                        <button type="button" class="scientist_button">
+                            Видалити всіх вчених, ім’я яких починається на “А”
+                        </button>
+                    </li>
+                    <li class="scientist_item">
+                        <button type="button" class="scientist_button">
+                            Знайти вчених, прізвища яких починаються на на літеру “С”
+                        </button>
+                    </li>
+                    <li class="scientist_item">
+                        <button type="button" class="scientist_button">
+                            Знайти рік народження Albert Einshtein
+                        </button>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <img class="footer_img" src="./img/logo.png" alt="">
+            <ul class="footer_list">
+                <li class="footer_item">
+                    Тел: +38 (123) 456 78 90
+                </li>
+                <li class="footer_item">
+                    E-Mail: codingmagic@gmail.com
+                </li>
+                <li class="footer_item">
+                    Facebook: CodingMagic
+                </li>
+                <li class="footer_item">
+                    Twitter: CodingMagic
+                </li>
+                <li class="footer_item">
+                    Instagram: CodingMagic
+                </li>
+            </ul>
+            <form>
+                <input placeholder="Ваша ел. адреса..." class="footer_input" type="text">
+                <button class="footer_button" type="button">
+                    Підписатись
+                </button>
+                <span class="footer_span">
+                    *Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті
+                </span>
+            </form>
+        </div>
+    </footer>
+
+    <div class="backdrop">
+        <div class="start-model">
+            <h2 class="start-model_title">Введіть ваше ім’я</h2>
+            <input class="start-model_input" type="text" placeholder="Ваше ім’я">
+            <button class="start-model_button" type="button">Закрити</button>
+        </div>
+    </div>
+
+    <script type="module" src="./js/football.js"></script>
+    <script type="module" src="./js/start-modal.js"></script>
+    <script type="module" src="./js/year.js"></script>
+    <script type="module" src="./js/find.js"></script>
+    <script type="module" src="./js/time.js"></script>
+    <script type="module" src="./js/number.js"></script>
+    <script type="module" src="./js/canculator.js"></script>
+    <script type="module" src="./js/dinosaur.js"></script>
+    <script type="module" src="./js/scientist.js"></script>
+</body>
+ 
+</html>
