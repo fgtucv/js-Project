@@ -1,50 +1,61 @@
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissors = document.querySelector("#scissors");
-const youScore = document.querySelector(".games_you-score")
-const computerScore = document.querySelector(".games_computer-score")
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
+const resultSpan = document.querySelector(".games_span");
+const scoreSpan = document.querySelector(".games_score");
 
-rock.addEventListener("click", choiceRock);
-paper.addEventListener("click", choicePaper);
-scissors.addEventListener("click", choiceScissors);
+let playerScore = 0;
+let computerScore = 0;
 
-const choices = ["rock", "paper", 'legs'];
+rockButton.addEventListener("click", choicesRock);
 
-let youChoices = "";
-let youResult = 0;
-let computerResult = 0;
-
-function choiceRock() {
-    youChoices = "rock";
+function choicesRock() {
+    playStart("rock");
 }
 
-function choicePaper() {
-    youChoices = "paper";
+paperButton.addEventListener("click", paperChoice);
+
+function paperChoice() {
+    playStart("paper");
 }
 
-function choiceScissors() {
-    youChoices = "scissors";
+scissorsButton.addEventListener("click", scissorsChoice);
+
+function scissorsChoice() {
+    playStart("scissors");
 }
 
-function computreChoice() {
-    return choices[Math.round(Math.random() * choices.length)];
-}
+function playStart(youChoice) {
 
-function play() {
-    if ((youChoices === "rock" && computreChoice() === "scissors") ||
-        (youChoices === "paper" && computreChoice() === "rock") ||
-        (youChoices === "scissors" && computreChoice() === "paper")) {
-            youResult = youResult + 1;
+    if (youChoice === competerChoice()) {
+        resultSpan.textContent = "Нічия!";
+        resultSpan.style.color = "#000000";
 
-            youScore = `Ви: ${youResult}`;
-    } else if (youChoices === computreChoice()) {
-        youResult = youResult + 1;
-        computerResult = computerResult + 1;
-
-        youScore = `Ви: ${youResult}`;
-        computerScore = `Компютер: ${computerResult}`;
+    } else if (
+        (youChoice === "rock" && competerChoice() === "scissors") ||
+        (youChoice === "paper" && competerChoice() === "rock") ||
+        (youChoice === "scissors" && competerChoice() === "paper")
+    ) {
+        resultSpan.textContent = "Ви виграли раунд!";
+        resultSpan.style.color = "#039900";
+        playerScore++;
     } else {
-        youScore = `Ви: ${youResult}`;
-        computerScore = `Компютер: ${computerResult}`;
+        resultSpan.textContent = "Комп'ютер виграв раунд!";
+        resultSpan.style.color = "#990000";
+        computerScore++;
     }
+    updateScore();
+
+}
+
+function competerChoice() {
+    const choices = ["rock", "paper", "scissors"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+}
+
+function updateScore() {
+    scoreSpan.textContent = ` Рахунок:
+    Комп’ютер: ${computerScore}
+    Ви: ${playerScore}`;
 }
