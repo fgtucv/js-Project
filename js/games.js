@@ -3,6 +3,7 @@ const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
 const resultSpan = document.querySelector(".games_span");
 const scoreSpan = document.querySelector(".games_score");
+const startButton = document.querySelector(".games_get-button");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -10,20 +11,26 @@ let computerScore = 0;
 rockButton.addEventListener("click", choicesRock);
 
 function choicesRock() {
-    playStart("rock");
+    started("rock");
 }
 
 paperButton.addEventListener("click", paperChoice);
 
 function paperChoice() {
-    playStart("paper");
+    started("paper");
 }
 
 scissorsButton.addEventListener("click", scissorsChoice);
 
 function scissorsChoice() {
-    playStart("scissors");
+    started("scissors");
 }
+function started(choice){
+    startButton.addEventListener("click", () => {
+        playStart(choice)
+    });
+}
+
 
 function playStart(youChoice) {
 

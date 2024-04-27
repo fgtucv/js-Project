@@ -1,14 +1,16 @@
 const time = document.querySelector(".time_input");
 const button = document.querySelector(".time_button");
-const resault = document.querySelector(".time_span");
+const result = document.querySelector(".time_span");
 
-button.addEventListener("click", timeCanculator);
+button.addEventListener("click", timeCalculator);
 
-function timeCanculator() {
-    const totalTime = parseInt(time.value);
+function timeCalculator() {
+    const totalDays = parseInt(time.value);
 
-    const hours = Math.floor(totalTime / 60);
-    const minutes = totalTime % 60;
+    const hours = Math.floor(totalDays * 24);
+    const minutes = hours * 60;
 
-    resault.textContent = `${hours}:${minutes}`;
+    result.textContent = `${hours} годин ${minutes} хвилин`;
+
+    time.value = "";
 };

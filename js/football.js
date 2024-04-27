@@ -1,31 +1,31 @@
-const field = document.querySelector(".football_filed");
+const filed = document.querySelector(".football_filed");
 const ball = document.querySelector(".football_ball");
 
 const ballWidth = ball.clientWidth;
 const ballHeight = ball.clientHeight;
 
-ball.style.left = (field.clientWidth / 2 - ballWidth / 2) + "px";
-ball.style.top = (field.clientHeight / 2 - ballHeight / 2) + "px";
+const filedWidth = filed.clientWidth;
+const filedHeight = filed.clientHeight;
 
-field.addEventListener("click", moveBall);
+ball.style.left = filedWidth / 2 - ballWidth / 2 + "px";
+ball.style.top = filedHeight / 2 - ballHeight / 2 + "px";
 
-function moveBall(event) {
-    const x = event.clientX;
-    const y = event.clientY;
+filed.addEventListener("click", moveBall);
 
-    ball.style.top = (y - field.clientTop - ballHeight / 2) + "px";
-    ball.style.left = (x - field.clientLeft - ballWidth / 2) + "px";
+function moveBall(event){
+    ball.style.left = event.pageX - filed.offsetLeft - ballWidth / 2 + "px"
+    ball.style.top = event.pageY - filed.offsetTop - ballHeight / 2 + "px"
 
-    if(ball.style.left < 0){
-        ball.style.left = "0px";
-    } else if (ball.style.top < 0){
-        ball.style.top = "0px";
-    } else if (ball.style.left > field.clientWidth){
-        ball.style.left = field.clientWidth - ballWidth + "px";
-    } else if (ball.style.top > field.clientHeight){
-        ball.style.top = field.clientHeight - ballHeight + "px";
+    if (parseInt(ball.style.left) < 0){
+        ball.style.left = "0px"
     }
-
-    // ball.style.left = `${x}px`;
-    // ball.style.top = `${y}px`;
-}
+    if (parseInt(ball.style.top) < 0){
+        ball.style.top = "0px"
+    }
+    if (parseInt(ball.style.left) > filedWidth - ballWidth){
+        ball.style.left = filedWidth - ballWidth + "px"
+    }
+    if (parseInt(ball.style.top) > filedHeight - ballHeight){
+        ball.style.top = filedHeight - ballHeight + "px"
+    }
+};

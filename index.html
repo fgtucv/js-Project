@@ -5,25 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" rel="stylesheet">
+    <link href="./style/reset.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header-section">
         <div class="container">
-            <img src="./img/logo.png" alt="">
+            <svg class="header_logo-icon">
+                <use href="./img/symbol-defs.svg#icon-logo"></use>
+            </svg>
             <nav class="header_nav">
                 <select class="form-select" aria-label="Default select example">
-                    <option id="all" selected>Інтерактив</option>
-                    <option id="numbers" value="1">Числові</option>
-                    <option id="playing" value="2">Ігрові</option>
-                    <option id="acquaintance" value="3">Ознайомчі</option>
+                    <option id="all" value="all">Інтерактив</option>
+                    <option id="numbers" value="numbers">Числові</option>
+                    <option id="playing" value="playing">Ігрові</option>
+                    <option id="acquaintance" value="acquaintance">Ознайомчі</option>
                 </select>
                 <span class="header_span">
                     Наша команда
@@ -53,11 +52,11 @@
                 <h2 class="year_title">
                     Перевір в який рік ти народився
                 </h2>
-                <div data-game="acquaintance" class="year_div">
-                    <input placeholder="Введіть рік народження" class="year_input" type="text">
+                <div class="year_div" data-game="acquaintance">
+                    <input class="year_input" type="text" placeholder="Введіть рік народження">
                     <button class="year_button">
                         <svg class="dandruff-icon">
-                            <use href="./img/symbol-defs.svg#icon-dandruff"></use>
+                            <use href="./img/symbol-defs.svg#icon-start"></use>
                         </svg>
                     </button>
                     <span class="year_span">
@@ -66,16 +65,16 @@
                 </div>
 
             </section>
-            <div class="border"></div>
             <section class="find" data-game="numbers">
+                <div class="border"></div>
                 <h2 class="find_title">
                     Вгадай число, яке загадав комп’ютер
                 </h2>
                 <div class="find_div">
-                    <input placeholder="Введіть число" type="text" class="find_input">
-                    <button type="button" class="find_button">
+                    <input class="find_input" type="text" placeholder="Введіть число">
+                    <button class="find_button" type="button">
                         <svg class="dandruff-icon">
-                            <use href="./img/symbol-defs.svg#icon-dandruff"></use>
+                            <use href="./img/symbol-defs.svg#icon-start"></use>
                         </svg>
                     </button>
                     <span class="find_span">
@@ -83,29 +82,29 @@
                     </span>
                 </div>
             </section>
-            <div class="border"></div>
-            <section data-game="playing" class="games">
+            <section class="games" data-game="playing">
+                <div class="border"></div>
                 <h2 class="games_title">
                     Камінь - ножиці - папір
                 </h2>
                 <div class="games_div">
                     <ul class="games_list">
                         <li class="games_item">
-                            <button class="games_button" type="button" id="rock">
+                            <button class="games_button" id="rock" type="button">
                                 <!-- <svg class="games-icon">
                                     <use href="./img/symbol-defs.svg#icon-rock"></use>
                                 </svg> -->
-                                <img src="./img/rock.png" alt="" srcset="">
+                                <img src="./img/rock.png" alt srcset>
                             </button>
                         </li>
                         <li class="games_item">
-                            <button class="games_button" type="button" id="paper">
-                                <img src="./img/paper.png" alt="" srcset="">
+                            <button class="games_button" id="paper" type="button">
+                                <img src="./img/paper.png" alt srcset>
                             </button>
                         </li>
                         <li class="games_item">
-                            <button class="games_button" type="button" id="legs">
-                                <img src="./img/legs.png" alt="" srcset="">
+                            <button class="games_button" id="legs" type="button">
+                                <img src="./img/legs.png" alt srcset>
                             </button>
                         </li>
                     </ul>
@@ -122,37 +121,37 @@
                     Варіант комп’ютера
                 </button>
             </section>
-            <div class="border"></div>
             <section class="canculator" data-game="numbers">
+                <div class="border"></div>
                 <h2 class="canculator_titel">
                     Калькулятор
                 </h2>
                 <div class="canculator_div">
-                    <input placeholder="Введіть число" type="text" class="canculator_number-one">
+                    <input class="canculator_number-one" type="text" placeholder="Введіть число">
                     <ul class="canculator_list">
                         <li class="canculator_item">
-                            <button type="button" class="canculator_button canculator_button-add">
+                            <button class="canculator_button canculator_button-add" type="button">
                                 +
                             </button>
                         </li>
                         <li class="canculator_item">
-                            <button type="button" class="canculator_button canculator_button-multiply">
+                            <button class="canculator_button canculator_button-multiply" type="button">
                                 *
                             </button>
                         </li>
                         <li class="canculator_item">
-                            <button type="button" class="canculator_button canculator_button-minus">
+                            <button class="canculator_button canculator_button-minus" type="button">
                                 -
                             </button>
                         </li>
                         <li class="canculator_item">
-                            <button type="button" class="canculator_button canculator_button-division">
+                            <button class="canculator_button canculator_button-division" type="button">
                                 /
                             </button>
                         </li>
                     </ul>
-                    <input placeholder="Введіть число" type="text" class="canculator_number-tow">
-                    <button type="button" class="canculator_button-result">
+                    <input class="canculator_number-tow" type="text" placeholder="Введіть число">
+                    <button class="canculator_button-result" type="button">
                         =
                     </button>
                     <span class="canculator_result">
@@ -160,16 +159,16 @@
                     </span>
                 </div>
             </section>
-            <div class="border"></div>
             <section class="time" data-game="numbers">
+                <div class="border"></div>
                 <h2 class="time_title">
                     Калькулятор часу
                 </h2>
                 <div class="time_div">
-                    <input placeholder="Введіть число" type="text" class="time_input">
-                    <button type="button" class="time_button">
+                    <input class="time_input" type="text" placeholder="Введіть число">
+                    <button class="time_button" type="button">
                         <svg class="dandruff-icon">
-                            <use href="./img/symbol-defs.svg#icon-dandruff"></use>
+                            <use href="./img/symbol-defs.svg#icon-start"></use>
                         </svg>
                     </button>
                     <span class="time_span">
@@ -177,54 +176,58 @@
                     </span>
                 </div>
             </section>
-            <div class="border"></div>
-            <section data-game="playing" class="dinosaur">
+            <section class="dinosaur" data-game="playing">
+                <div class="border"></div>
                 <h2 class="dinosaur_title">
                     Google динозавр
                 </h2>
                 <div class="dinosaur_game">
-                    <img class="dinosaur_img" src="./img/dinosaur.png" alt="">
-                    <img class="dinosaur_cactus" src="./img/cactus.png" alt="">
+                    <span class="dinosaur_score">score: 0</span>
+                    <!-- <svg class="dinosaur_img">
+                        <use href="./img/symbol-defs.svg#icon-dinosaur-game-seeklogo"></use>
+                    </svg> -->
+                    <!-- <img class="dinosaur_img" src="./img/dinosaur.png" alt> -->
+                    <img class="dinosaur_cactus" src="./img/cactus.png" alt>
                     <div class="dinosaur_road"></div>
                 </div>
             </section>
-            <div class="border"></div>
-            <section data-game="playing" class="football">
+            <section class="football" data-game="playing">
+                <div class="border"></div>
                 <h2 class="football_title">
                     Футбол
                 </h2>
                 <div class="football_filed">
-                    <img class="football_ball" src="./img/ball.png" alt="">
+                    <img class="football_ball" src="./img/ball.png" alt>
                 </div>
 
             </section>
-            <div class="border"></div>
-            <section data-game="numbers" class="numbers">
+            <section class="numbers" data-game="numbers">
+                <div class="border"></div>
                 <h2 class="numbers_title">
                     Введіть 3 числа
                 </h2>
                 <ul class="numbers_list">
                     <li class="numbers_item">
-                        <input placeholder="Введіть число" type="text" class="numbers_input1 numbers_input">
+                        <input class="numbers_input1 numbers_input" type="text" placeholder="Введіть число">
                     </li>
                     <li class="numbers_item">
-                        <input placeholder="Введіть число" type="text" class="numbers_input2 numbers_input">
+                        <input class="numbers_input2 numbers_input" type="text" placeholder="Введіть число">
                     </li>
                     <li class="numbers_item">
-                        <input placeholder="Введіть число" type="text" class="numbers_input3 numbers_input">
+                        <input class="numbers_input3 numbers_input" type="text" placeholder="Введіть число">
                     </li>
                 </ul>
                 <h3 class="numbers_result">
                     Найбільше число, яке ви ввели - (число)
                 </h3>
             </section>
-            <div class="border"></div>
-            <section data-game="acquaintance" class="teams">
+            <section class="teams" data-game="acquaintance">
+                <div class="border"></div>
                 <h2 class="teams_title">
                     Наша команда
                 </h2>
                 <div class="teams-slider">
-                    <button class="teams_button" type="button" id="next">
+                    <button class="teams_button" id="next" type="button">
                         <svg class="teams_icon">
                             <use href="./img/symbol-defs.svg#icon-aroww"></use>
                         </svg>
@@ -268,7 +271,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="teams_button" type="button" id="prev">
+                    <button class="teams_button" id="prev" type="button">
                         <svg class="teams_icon">
                             <use href="./img/symbol-defs.svg#icon-aroww"></use>
                         </svg>
@@ -276,8 +279,8 @@
                 </div>
 
             </section>
-            <div class="border"></div>
-            <section data-game="acquaintance" class="scientist">
+            <section class="scientist" data-game="acquaintance">
+                <div class="border"></div>
                 <h2 class="scientist_title">
                     Обери вченого/их
                 </h2>
@@ -285,49 +288,49 @@
 
                 </ul>
                 <ul class="scientist_button-list">
-                    <li class="scientist_item">
-                        <button data-button="button1" type="button" class="scientist_button">
+                    <li class="scientist_button-item">
+                        <button class="scientist_button" data-button="button1" type="button">
                             Які вчені народилися в 19 ст.
                         </button>
                     </li>
-                    <li class="scientist_item">
-                        <button data-button="button2" type="button" class="scientist_button">
+                    <li class="scientist_button-item">
+                        <button class="scientist_button" data-button="button2" type="button">
                             Відсортувати вчених за алфавітом
                         </button>
                     </li>
-                    <li class="scientist_item">
-                        <button data-button="button3" type="button" class="scientist_button">
+                    <li class="scientist_button-item">
+                        <button class="scientist_button" data-button="button3" type="button">
                             Відсортувати вчених за кількістю прожитих років
                         </button>
                     </li>
-                    <li class="scientist_item">
-                        <button data-button="button4" type="button" class="scientist_button">
+                    <li class="scientist_button-item">
+                        <button class="scientist_button" data-button="button4" type="button">
                             Знайти вченого, який народився найпізніше
                         </button>
                     </li>
-                    <li class="scientist_item">
-                        <button data-button="button5" type="button" class="scientist_button">
+                    <li class="scientist_button-item">
+                        <button class="scientist_button" data-button="button5" type="button">
                             1. Знайти вчених, в яких співпадають перші літери імені і прізвища
                         </button>
                     </li>
-                    <li class="scientist_item">
-                        <button data-button="button6" type="button" class="scientist_button">
+                    <li class="scientist_button-item">
+                        <button class="scientist_button" data-button="button6" type="button">
                             Знайти вченого, який прожив найдовше і вченого,
                             який прожив найменше
                         </button>
                     </li>
-                    <li class="scientist_item">
-                        <button data-button="button7" type="button" class="scientist_button">
+                    <li class="scientist_button-item">
+                        <button class="scientist_button" data-button="button7" type="button">
                             Видалити всіх вчених, ім’я яких починається на “А”
                         </button>
                     </li>
-                    <li class="scientist_item">
-                        <button data-button="button8" type="button" class="scientist_button">
+                    <li class="scientist_button-item">
+                        <button class="scientist_button" data-button="button8" type="button">
                             Знайти вчених, прізвища яких починаються на на літеру “С”
                         </button>
                     </li>
-                    <li class="scientist_item">
-                        <button data-button="button9" type="button" class="scientist_button">
+                    <li class="scientist_button-item">
+                        <button class="scientist_button" data-button="button9" type="button">
                             Знайти рік народження Albert Einshtein
                         </button>
                     </li>
@@ -337,7 +340,9 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <img class="footer_img" src="./img/logo.png" alt="">
+            <svg class="footer_img">
+                <use href="./img/symbol-defs.svg#icon-logo"></use>
+            </svg>
             <ul class="footer_list">
                 <li class="footer_item">
                     Тел: +38 (123) 456 78 90
@@ -356,8 +361,8 @@
                 </li>
             </ul>
             <form>
-                <input placeholder="Ваша ел. адреса..." class="footer_input" type="text">
-                <button class="footer_button" type="button">
+                <input class="footer_input" type="email" placeholder="Ваша ел. адреса...">
+                <button class="footer_button" type="submit">
                     Підписатись
                 </button>
                 <span class="footer_span">
@@ -367,22 +372,33 @@
         </div>
     </footer>
 
+    <div class="dinosaur_backdrop">
+        <div class="dinosaur-modal_div">
+            <h2 class="dinosaur-modal_titel">
+                Гра закінчена
+            </h2>
+            <button class="dinosaur-modal_button">
+                Закрити
+            </button>
+        </div>
+    </div>
+
     <div class="backdrop2">
         <div class="thanks-modal">
             <button class="thanks-modal_close" type="button">
-                <img class="thanks-modal_icon" src="./img/close.png" alt="" srcset="">
+                <img class="thanks-modal_icon" src="./img/close.png" alt srcset>
             </button>
             <h2 class="thanks-modal_title">
                 Дякую за підписку!
             </h2>
-            <img class="sword" src="./img/sword.png" alt="">
-            <img class="game-development" src="./img/game-development.png" alt="">
-            <img class="puzzle" src="./img/puzzle.png" alt="">
-            <img class="tic-tac-toe" src="./img/tic-tac-toe.png" alt="">
+            <img class="sword" src="./img/sword.png" alt>
+            <img class="game-development" src="./img/game-development.png" alt>
+            <img class="puzzle" src="./img/puzzle.png" alt>
+            <img class="tic-tac-toe" src="./img/tic-tac-toe.png" alt>
         </div>
     </div>
-
-    <!-- <div class="backdrop">
+    <!-- 
+    <div class="backdrop">
         <div class="start-model">
             <h2 class="start-model_title">Введіть ваше ім’я</h2>
             <input class="start-model_input" type="text" placeholder="Ваше ім’я">
@@ -390,19 +406,20 @@
         </div>
     </div> -->
 
-    <!-- <script type="module" src="./js/football.js"></script> -->
+    <!-- <script src="./js/football.js" tyбpe="module"></script> -->
     <!-- <script type="module" src="./js/start-modal.js"></script> -->
-    <!-- <script type="module" src="./js/year.js"></script> -->
-    <!-- <script type="module" src="./js/find.js"></script> -->
-    <!-- <script type="module" src="./js/time.js"></script> -->
-    <!-- <script type="module" src="./js/number.js"></script> -->
-    <!-- <script type="module" src="./js/canculator.js"></script> -->
-    <script type="module" src="./js/dinosaur.js"></script>
-    <!-- <script type="module" src="./js/scientist.js"></script> -->
-    <!-- <script type="module" src="./js/slider.js"></script> -->
-    <!-- <script type="module" src="./js/games.js"></script> -->
-    <!-- <script type="module" src="./js/thanks-modal.js"></script> -->
-    <!-- <script type="module" src="./js/filter-section.js"></script> -->
+    <!-- <script src="./js/year.js" type="module"></script> -->
+    <!-- <script src="./js/find.js" type="module"></script> -->
+    <!-- <script src="./js/time.js" type="module"></script> -->
+    <!-- <script src="./js/number.js" type="module"></script> -->
+    <!-- <script src="./js/canculator.js" type="module"></script> -->
+    <!-- <script src="./js/dinosaur.js" type="module"></script> -->
+    <!-- <script src="./js/scientist.js" type="module"></script> -->
+    <!-- <script src="./js/slider.js" type="module"></script> -->
+    <!-- <script src="./js/games.js" type="module"></script> -->
+    <script src="./js/thanks-modal.js" type="module"></script>
+    <!-- <script src="./js/filter-section.js" type="module"></script> -->
+    <!-- <script src="./js/style-change.js" type="module"></script> -->
 </body>
 
 </html>

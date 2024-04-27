@@ -22,5 +22,12 @@ function findBigestNumber() {
         }
     });
 
-    result.textContent = `Найбільше число, яке ви ввели - ${bigestNumber}`;
+    console.log(bigestNumber)
+
+    if (isNaN(bigestNumber) === true) {
+        result.textContent = "Введіть правильне число";
+    } else {
+        result.textContent = `Найбільше число, яке ви ввели - ${bigestNumber}`;
+    }
+
 };

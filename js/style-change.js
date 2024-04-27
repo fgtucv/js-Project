@@ -1,14 +1,19 @@
 const checkbox = document.querySelector(".switch-input");
+const body = document.querySelector("body");
 const main = document.querySelector("main");
-// const text = document.querySelectorAll("span, h1, h2, p, button");
-// const bacgraund = document.querySelectorAll("section, body, div, nav, list");
+const text = document.querySelectorAll("span, h1, h2, p, button");
+const bacgraund = document.querySelectorAll("section, body, div, nav, list, main");
 
-checkbox.addEventListener("change", addClass);
+// console.log(checkbox)
 
-function addClass() {
-   if(main.style.backgroundColor === "white"){
-    main.style.b
-   } else if (main.style.backgroundColor !== "white"){
 
+checkbox.addEventListener("click", changeTheme);
+
+function changeTheme(){
+   if(body.className === "blackThemeBacgraund"){
+      body.classList.remove("blackThemeBacgraund");
+      
+   } else if(body.className !== "blackThemeBacgraund"){
+      body.classList.add("blackThemeBacgraund");
    }
 }
