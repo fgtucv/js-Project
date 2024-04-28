@@ -108,6 +108,7 @@
   display: none;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: display 0.5s cubic-bezier(.17,.67,.83,.67) 0.25s;
 }
 
 .thanks-modal {
