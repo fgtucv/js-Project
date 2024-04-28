@@ -20,7 +20,7 @@ function paperChoice() {
     started("paper");
 }
 
-scissorsButton.addEventListener("click", scissorsChoice);
+// scissorsButton.addEventListener("click", scissorsChoice);
 
 function scissorsChoice() {
     started("scissors");
