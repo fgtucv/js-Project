@@ -832,6 +832,11 @@ input:checked+.slider:before {
   animation: moveCactus 3s linear infinite;
 }
 
+.dinosaur_instruction{
+  color: #ffffff;
+  text-align: center;
+}
+
 .dinosaur_cactus {
   width: 20px;
   height: 35px;

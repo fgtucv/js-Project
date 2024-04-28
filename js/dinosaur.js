@@ -4,15 +4,21 @@ const cactus = document.querySelector(".dinosaur_cactus");
 const modal = document.querySelector(".dinosaur_backdrop");
 const closeButton = document.querySelector(".dinosaur-modal_button");
 const score = document.querySelector(".dinosaur_score");
+const instruction = document.querySelector(".dinosaur_instruction");
 
 let gameInterval;
 let isGameOver = false;
+
+games.style.backgroundColor = "rgba(126, 126, 126, 0.5)";
 
 games.addEventListener("click", startGame);
 
 function startGame(event) {
     isGameOver = false;
     document.addEventListener("keydown", dinosaurJump);
+
+    games.style.backgroundColor = "transparent";
+    instruction.style.opacity = "0";
     
     const startPossition = dinosaur.style.top;
     cactus.style.right = '0';
@@ -30,7 +36,7 @@ function dinosaurJump(event) {
 
         setTimeout(() => {
             dinosaur.style.top = "75%";
-        }, 450);
+        }, 500);
     }
 }
 

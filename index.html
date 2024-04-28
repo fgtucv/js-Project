@@ -27,12 +27,8 @@
                     <option id="playing" value="playing">Ігрові</option>
                     <option id="acquaintance" value="acquaintance">Ознайомчі</option>
                 </select>
-                <span class="header_span">
-                    Наша команда
-                </span>
-                <span class="header_span">
-                    Контакти
-                </span>
+                <a class="header_span" href="#team">Наша команда</a>
+                <a class="header_span" href="#contact">Контакти</a>
             </nav>
             <div class="header_info">
                 <label class="switch">
@@ -186,6 +182,11 @@
                 </h2>
                 <div class="dinosaur_game">
                     <span class="dinosaur_score">score: 0</span>
+                    <p class="dinosaur_instruction">
+                        Для того щоб почати гру натисніть <br>
+                        на гру правою кнопкою миші <br>
+                        щоб стрибати натискаєте стрілку вврех
+                    </p>
                     <svg class="dinosaur_img">
                         <use href="./img/symbol-defs.svg#icon-dinosaur"></use>
                     </svg>
@@ -224,7 +225,7 @@
                     Найбільше число, яке ви ввели - (число)
                 </h3>
             </section>
-            <section class="teams" data-game="acquaintance">
+            <section id="team" class="teams" data-game="acquaintance">
                 <div class="border"></div>
                 <h2 class="teams_title">
                     Збірна України з фудболу
@@ -380,7 +381,7 @@
             </section>
         </div>
     </main>
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="container">
             <svg class="footer_img">
                 <use href="./img/symbol-defs.svg#icon-logo"></use>
@@ -424,7 +425,6 @@
             </button>
         </div>
     </div>
-    <!-- f -->
 
     <div class="backdrop2">
         <div class="thanks-modal">
@@ -441,16 +441,16 @@
         </div>
     </div>
 
-    <div class="backdrop">
+    <!-- <div class="backdrop">
         <div class="start-model">
             <h2 class="start-model_title">Введіть ваше ім’я</h2>
             <input class="start-model_input" type="text" placeholder="Ваше ім’я">
             <button class="start-model_button" type="button">Закрити</button>
         </div>
-    </div>
+    </div> -->
 
     <script src="./js/football.js" type="module"></script>
-    <script type="module" src="./js/start-modal.js"></script>
+    <!-- <script type="module" src="./js/start-modal.js"></script> -->
     <script src="./js/year.js" type="module"></script>
     <script src="./js/find.js" type="module"></script>
     <script src="./js/time.js" type="module"></script>
