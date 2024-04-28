@@ -9,7 +9,7 @@ function closeModal() {
     if (input.value !== "" || undefined) {
         backdrop.style.display = "none";
 
-        name.textContent = `Вітаю, ${input.value}`;
+        name.textContent = `Вітаю, ${input.value}!`;
     }
 }
                 

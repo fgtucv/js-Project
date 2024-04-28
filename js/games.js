@@ -20,7 +20,7 @@ function paperChoice() {
     started("paper");
 }
 
-// scissorsButton.addEventListener("click", scissorsChoice);
+scissorsButton.addEventListener("click", scissorsChoice);
 
 function scissorsChoice() {
     started("scissors");
@@ -33,15 +33,14 @@ function started(choice){
 
 
 function playStart(youChoice) {
-
-    if (youChoice === competerChoice()) {
+    const computerChoice = competerChoice();
+    if (youChoice === computerChoice) {
         resultSpan.textContent = "Нічия!";
         resultSpan.style.color = "#000000";
-
     } else if (
-        (youChoice === "rock" && competerChoice() === "scissors") ||
-        (youChoice === "paper" && competerChoice() === "rock") ||
-        (youChoice === "scissors" && competerChoice() === "paper")
+        (youChoice === "rock" && computerChoice === "scissors") ||
+        (youChoice === "paper" && computerChoice === "rock") ||
+        (youChoice === "scissors" && computerChoice === "paper")
     ) {
         resultSpan.textContent = "Ви виграли раунд!";
         resultSpan.style.color = "#039900";
@@ -52,7 +51,6 @@ function playStart(youChoice) {
         computerScore++;
     }
     updateScore();
-
 }
 
 function competerChoice() {

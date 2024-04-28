@@ -7,7 +7,6 @@ const score = document.querySelector(".dinosaur_score");
 
 let gameInterval;
 let isGameOver = false;
-let gameScore = 0;
 
 games.addEventListener("click", startGame);
 
@@ -15,13 +14,6 @@ function startGame(event) {
     isGameOver = false;
     document.addEventListener("keydown", dinosaurJump);
     
-    for (let i = 0; i >= 1; i = i + 0) {
-        if (isGameOver !== true) {
-                gameScore = gameScore + 1;
-                score.textContent = `score: ${gameScore}`;
-        };
-    };
-
     const startPossition = dinosaur.style.top;
     cactus.style.right = '0';
     cactus.classList.add("move");
