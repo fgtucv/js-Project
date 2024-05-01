@@ -958,6 +958,7 @@ input:checked+.slider:before {
   flex-wrap: wrap;
   gap: 59px;
   width: 577px;
+  height: 418px;
   margin-bottom: 36px;
 }
 

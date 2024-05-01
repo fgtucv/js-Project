@@ -18,25 +18,45 @@ button.addEventListener("click", showResult);
 function Add() {
     number1 = Number(inputOne.value);
     number2 = Number(inputTwo.value);
-    result = number1 + number2;
+    if (!isNaN(number1) && !isNaN(number2)) {
+        result = number1 + number2;
+    } else {
+        resultSpan.textContent = "Помилка";
+    }
 };
 
 function Multiply() {
     number1 = Number(inputOne.value);
     number2 = Number(inputTwo.value);
-    result = number1 * number2;
+    if (!isNaN(number1) && !isNaN(number2)) {
+        result = number1 * number2;
+    } else {
+        resultSpan.textContent = "Помилка";
+    }
 };
 
 function Minus() {
     number1 = Number(inputOne.value);
     number2 = Number(inputTwo.value);
-    result = number1 - number2;
+    if (!isNaN(number1) && !isNaN(number2)) {
+        result = number1 - number2;
+    } else {
+        resultSpan.textContent = "Помилка";
+    }
 };
 
 function Division() {
     number1 = Number(inputOne.value);
     number2 = Number(inputTwo.value);
-    result = number1 / number2;
+    if (!isNaN(number1) && !isNaN(number2)) {
+        if (number2 !== 0) {
+            result = number1 / number2;
+        } else {
+            resultSpan.textContent = "Помилка";
+        }
+    } else {
+        resultSpan.textContent = "Помилка ";
+    }
 };
 
 function showResult() {

@@ -5,12 +5,23 @@ const result = document.querySelector(".time_span");
 button.addEventListener("click", timeCalculator);
 
 function timeCalculator() {
-    const totalDays = parseInt(time.value);
+    const inputValue = time.value.trim();
 
-    const hours = Math.floor(totalDays * 24);
-    const minutes = hours * 60;
+    if (inputValue !== "") {
+        const totalDays = parseInt(inputValue);
 
-    result.textContent = `${hours} годин ${minutes} хвилин`;
+        if (!isNaN(totalDays)) {
+            const hours = Math.floor(totalDays * 24);
+            const minutes = hours * 60;
 
-    time.value = "";
+            result.textContent = `${hours} годин ${minutes} хвилин`;
+            time.value = "";
+        } else {
+            result.textContent = "Введіть час";
+            result.style.color = "red";
+        }
+    } else {
+        result.textContent = "Введіть час";
+        result.style.color = "red";
+    }
 };

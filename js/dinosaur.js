@@ -8,6 +8,8 @@ const instruction = document.querySelector(".dinosaur_instruction");
 
 let gameInterval;
 let isGameOver = false;
+let countScore = 0;
+let interval;
 
 games.style.backgroundColor = "rgba(126, 126, 126, 0.5)";
 
@@ -19,9 +21,16 @@ function startGame(event) {
 
     games.style.backgroundColor = "transparent";
     instruction.style.opacity = "0";
-    
+
+    interval = setInterval(addScore, 20);
+
+    function addScore(){
+        countScore += 1;
+        score.textContent = `score: ${countScore}`;
+    }
+
     const startPossition = dinosaur.style.top;
-    cactus.style.right = '0';
+    cactus.style.right = "0";
     cactus.classList.add("move");
 
     gameInterval = setInterval(() => {
@@ -43,7 +52,7 @@ function dinosaurJump(event) {
 function moveCactus() {
     const currentRight = parseInt(cactus.style.right);
     if (currentRight >= 100) {
-        cactus.style.right = '0';
+        cactus.style.right = "0";
     } else {
         cactus.style.right = `${currentRight + 1}%`;
     }
@@ -67,6 +76,9 @@ function endGame() {
     clearInterval(gameInterval);
     modal.style.display = "block";
     cactus.classList.remove("move");
+    games.style.backgroundColor = "rgba(126, 126, 126, 0.5)";
+    instruction.style.opacity = "1";
+    clearInterval(interval)
 }
 
 closeButton.addEventListener("click", () => {
