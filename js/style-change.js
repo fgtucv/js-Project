@@ -20,6 +20,14 @@ function checkStyle(element) {
   } else{
    state = false
   }
+
+  localStorage.setItem("themeState", JSON.stringify(state));
+
+  if(JSON.parse(localStorage.getItem("themeState")) === true){
+    body.classList.add("blackThemeBacgraund");
+  } else{
+    body.classList.remove("blackThemeBacgraund");
+  }
 }
 
 // function changeTheme(){
